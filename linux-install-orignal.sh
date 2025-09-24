@@ -11,7 +11,8 @@ echo "# deb http://in.archive.ubuntu.com/ubuntu/ bionic main universe" | sudo te
 cd ~
 tar -zxvf ns-allinone-2.35.tar.gz
 # Define the base directory
-NS_DIR=~/ns-allinone-2.35
+NS_DIR=/home/$SUDO_USER/ns-allinone-2.35
+
 
 if [ -d "$NS_DIR" ]; then
     echo "Directory exists: $NS_DIR"

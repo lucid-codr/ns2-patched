@@ -7,10 +7,10 @@ sudo apt install gcc-4.8 g++-4.8 -y
 echo "# deb http://in.archive.ubuntu.com/ubuntu/ bionic main universe" | sudo tee /etc/apt/sources.list.d/bionic.list
 cd ~
 # Define the base directory
-NS_DIR=~/ns2-patched
+NS_DIR=/home/$SUDO_USER/ns2-patched
 
 cd ~/ns2-patched/
-./install
+sudo bash install
 
 BASHRC=~/.bashrc
 
