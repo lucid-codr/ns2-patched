@@ -60,7 +60,7 @@ sed -i '137s|void eraseAll() { erase(baseMap::begin(), baseMap::end()); }|void e
 echo "Patch applied. Backup saved as ${FILE}.bak"
 
 cd $NS_DIRNS_DIR
-sudo bash install.sh
+bash install.sh
 
 BASHRC=$USER_HOME/.bashrc
 

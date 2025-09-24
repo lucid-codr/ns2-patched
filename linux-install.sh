@@ -13,7 +13,7 @@ USER_HOME=$(getent passwd $SUDO_USER | cut -d: -f6)
 NS_DIR=$USER_HOME/ns2-patched
 
 cd $NS_DIR
-sudo bash install.sh
+bash install.sh
 
 BASHRC=$USER_HOME/.bashrc
 
