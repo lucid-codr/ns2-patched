@@ -10,8 +10,11 @@ sudo apt install gcc-4.8 g++-4.8 -y
 echo "# deb http://in.archive.ubuntu.com/ubuntu/ bionic main universe" | sudo tee /etc/apt/sources.list.d/bionic.list
 cd ~
 tar -zxvf ns-allinone-2.35.tar.gz
+
+USER_HOME=$(getent passwd $SUDO_USER | cut -d: -f6)
+
 # Define the base directory
-NS_DIR=$HOME/ns-allinone-2.35
+NS_DIR=$USER_HOME/ns-allinone-2.35
 
 
 if [ -d "$NS_DIR" ]; then
@@ -46,7 +49,7 @@ done
 echo "Patching complete."
 
 # File path
-FILE=$HOME/ns-allinone-2.35/ns-2.35/linkstate/ls.h
+FILE=$USER_HOME/ns-allinone-2.35/ns-2.35/linkstate/ls.h
 
 # Backup original file
 cp "$FILE" "${FILE}.bak"

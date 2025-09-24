@@ -6,13 +6,16 @@ sudo apt update
 sudo apt install gcc-4.8 g++-4.8 -y
 echo "# deb http://in.archive.ubuntu.com/ubuntu/ bionic main universe" | sudo tee /etc/apt/sources.list.d/bionic.list
 cd ~
+
+USER_HOME=$(getent passwd $SUDO_USER | cut -d: -f6)
+
 # Define the base directory
-NS_DIR=$HOME/ns2-patched
+NS_DIR=$USER_HOME/ns2-patched
 
 cd $NS_DIRNS_DIR
 sudo bash install
 
-BASHRC=$HOME/.bashrc
+BASHRC=$USER_HOME/.bashrc
 
 BLOCK="# NS-2.35 Environment Variables
 export PATH=\$PATH:\$HOME/ns2-patched/bin:\$HOME/ns2-patched/tcl8.5.10/unix:\$HOME/ns2-patched/tk8.5.10/unix
