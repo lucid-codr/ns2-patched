@@ -12,9 +12,6 @@ USER_HOME=$(getent passwd $SUDO_USER | cut -d: -f6)
 # Define the base directory
 NS_DIR=$USER_HOME/ns2-patched
 
-cd $NS_DIR
-bash install.sh
-
 BASHRC=$USER_HOME/.bashrc
 
 BLOCK="# NS-2.35 Environment Variables
@@ -33,4 +30,3 @@ fi
 source $USER_HOME/.bashrc
 
 echo "NS-2.35 installation and patching complete."
-echo "Running exmaple simulation script."

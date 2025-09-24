@@ -37,7 +37,9 @@ cd ns2-patched
 ### 3. Run the automatic installer
 
 ```bash
-sudo bash linux-install.sh
+sudo bash pre-install.sh
+cd ~/ns2-patched
+./install
 ```
 
 This script:
@@ -47,7 +49,7 @@ This script:
 * Verifies the installation
 
 **Note** : If you are using the orignal ns-allineone-2.35.tar.gz from sourceforge and not this patched repo
-You may use the `linux-install-orignal.sh` (ensure `ns-allinone-2.35.tar.gz` is in the home directory) which also applies the patches.
+You may use the `pre-install-orignal.sh` (ensure `ns-allinone-2.35.tar.gz` is in the home directory) which also applies the patches.
 
 ### 4. Test the installation
 
