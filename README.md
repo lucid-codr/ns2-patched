@@ -37,7 +37,7 @@ cd ns2-patched
 ### 3. Run the automatic installer
 
 ```bash
-./linux-install.sh
+sudo bash linux-install.sh
 ```
 
 This script:
