@@ -27,6 +27,6 @@ else
     echo "NS-2.35 environment variables appended to $BASHRC"
 fi
 
-source $USER_HOME/.bashrc
+source $BASHRC
 
-echo "NS-2.35 installation and patching complete."
+echo "NS-2.35 Pre installation Sequence Complete."

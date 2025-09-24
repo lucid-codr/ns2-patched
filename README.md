@@ -28,31 +28,30 @@ sudo apt install git
 
 ### 2. Clone the repository
 
-```
+```bash
 cd ~
 git clone https://github.com/lucid-codr/ns2-patched.git
-cd ns2-patched
 ```
 
 ### 3. Run the installer
 
 ```bash
+cd ns2-patched
 sudo bash pre-install.sh
 ```
 
 ```bash
-cd ~/ns2-patched
 chmod +x install
 find . -type f -name "*.sh" -exec chmod +x {} \;
 find . -type f -name "configure" -exec chmod +x {} \;
 ./install
 ```
 
-This script:
+This Sequence:
 
 * Installs dependencies
 * Builds NS-2.35 and NAM
-* Verifies the installation
+* Updates the bashrc environment variables 
 
 **Note** : If you are using the orignal ns-allineone-2.35.tar.gz from sourceforge and not this patched repo
 You may use the `pre-install-orignal.sh` (ensure `ns-allinone-2.35.tar.gz` is in the home directory) which also applies the patches.
@@ -60,7 +59,7 @@ You may use the `pre-install-orignal.sh` (ensure `ns-allinone-2.35.tar.gz` is in
 ### 4. Test the installation
 
 ```bash
-cd ~/ns-patched/ns-2.35/tcl/ex/
+cd ~/ns2-patched/ns-2.35/tcl/ex/
 ns simple.tcl
 ```
 or for orignal file:
@@ -128,4 +127,17 @@ See the `LICENSE` file for details.
 * Community contributions and mirrors (SourceForge, GitHub)
 * This fork: focused on **WSL2/Ubuntu auto install + compiler fixes**.
 
+## BONUS
+Single copyable command (**Will prompt for password**):
+```bash
+sudo apt update && sudo apt upgrade -y
+sudo apt install git
+cd ~
+git clone https://github.com/lucid-codr/ns2-patched.git
+cd ns2-patched
+sudo bash pre-install.sh
+chmod +x install
+find . -type f -name "*.sh" -exec chmod +x {} \;
+find . -type f -name "configure" -exec chmod +x {} \;
+./install
 ```
