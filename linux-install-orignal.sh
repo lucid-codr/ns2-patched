@@ -11,7 +11,7 @@ echo "# deb http://in.archive.ubuntu.com/ubuntu/ bionic main universe" | sudo te
 cd ~
 tar -zxvf ns-allinone-2.35.tar.gz
 # Define the base directory
-NS_DIR=/home/$SUDO_USER/ns-allinone-2.35
+NS_DIR=$HOME/ns-allinone-2.35
 
 
 if [ -d "$NS_DIR" ]; then
@@ -46,7 +46,7 @@ done
 echo "Patching complete."
 
 # File path
-FILE=~/ns-allinone-2.35/ns-2.35/linkstate/ls.h
+FILE=$HOME/ns-allinone-2.35/ns-2.35/linkstate/ls.h
 
 # Backup original file
 cp "$FILE" "${FILE}.bak"
@@ -56,8 +56,8 @@ sed -i '137s|void eraseAll() { erase(baseMap::begin(), baseMap::end()); }|void e
 
 echo "Patch applied. Backup saved as ${FILE}.bak"
 
-cd ~/ns-allinone-2.35/
-./install
+cd $NS_DIRNS_DIR
+sudo bash install
 
 BASHRC=~/.bashrc
 
