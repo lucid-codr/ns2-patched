@@ -17,11 +17,17 @@ This fork ensures **compatibility with WSL2 and modern compilers**.
 ## Installation (WSL2 Ubuntu)
 Will also work for Ubuntu but not tested for it.
 
-### 1. Clone the repository
+### 1. Install Git
 
 ```bash
 sudo apt update && sudo apt upgrade -y
 sudo apt install git
+```
+
+### 2. Clone the repository
+
+```
+cd ~
 git clone https://github.com/lucid-codr/ns2-patched.git
 cd ns2-patched
 ```
