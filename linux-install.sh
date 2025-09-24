@@ -1,10 +1,10 @@
 sudo apt update && sudo apt upgrade -y
 sudo apt install build-essential autoconf automake libxmu-dev libx11-dev libxt-dev tcl-dev tk-dev gawk -y
-sudo echo "deb http://in.archive.ubuntu.com/ubuntu/ bionic main universe > /etc/apt/sources.list.d/bionic.list
+echo "deb http://in.archive.ubuntu.com/ubuntu/ bionic main universe" | sudo tee /etc/apt/sources.list.d/bionic.list
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 3B4FE6ACC0B21F32
 sudo apt update
 sudo apt install gcc-4.8 g++-4.8 -y
-sudo echo "# deb http://in.archive.ubuntu.com/ubuntu/ bionic main universe > /etc/apt/sources.list.d/bionic.list
+echo "# deb http://in.archive.ubuntu.com/ubuntu/ bionic main universe" | sudo tee /etc/apt/sources.list.d/bionic.list
 cd ~
 # Define the base directory
 NS_DIR=~/ns2-patched
