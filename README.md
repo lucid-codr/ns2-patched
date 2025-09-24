@@ -19,13 +19,20 @@ Will also work for Ubuntu but not tested for it.
 
 If you don't have wsl2 installed, refer [installation guide](https://www.freecodecamp.org/news/how-to-install-wsl2-windows-subsystem-for-linux-2-on-windows-10/)
 
+## Pre Configured:
+
 If you want the fully configured image go to [drive link](https://drive.google.com/file/d/19vyjGa7T8rUCGG96N_TKXUJF9v-2wJrL/view?usp=sharing)
+
 You can import by:
 ```powershell
 wsl --import Ubuntu <Install Location> .\xie_ns2_wsl.tar
 ```
+
 Replace <Install Location> with your install location
+
 **Note**: Directory must be created before
+
+## Manual Steps:
 
 ### 1. Install Git
 
