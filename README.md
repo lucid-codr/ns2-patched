@@ -17,6 +17,8 @@ This fork ensures **compatibility with WSL2 and modern compilers**.
 ## Installation (WSL2 Ubuntu)
 Will also work for Ubuntu but not tested for it.
 
+If you don't have wsl2 installed, refer [installation guide](https://www.freecodecamp.org/news/how-to-install-wsl2-windows-subsystem-for-linux-2-on-windows-10/)
+
 ### 1. Install Git
 
 ```bash
