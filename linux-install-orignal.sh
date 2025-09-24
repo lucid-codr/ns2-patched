@@ -60,9 +60,9 @@ sed -i '137s|void eraseAll() { erase(baseMap::begin(), baseMap::end()); }|void e
 echo "Patch applied. Backup saved as ${FILE}.bak"
 
 cd $NS_DIRNS_DIR
-sudo bash install
+sudo bash install.sh
 
-BASHRC=~/.bashrc
+BASHRC=$USER_HOME/.bashrc
 
 BLOCK="# NS-2.35 Environment Variables
 export PATH=\$PATH:\$HOME/ns-allinone-2.35/bin:\$HOME/ns-allinone-2.35/tcl8.5.10/unix:\$HOME/ns-allinone-2.35/tk8.5.10/unix
