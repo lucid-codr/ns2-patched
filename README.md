@@ -34,11 +34,17 @@ git clone https://github.com/lucid-codr/ns2-patched.git
 cd ns2-patched
 ```
 
-### 3. Run the automatic installer
+### 3. Run the installer
 
 ```bash
 sudo bash pre-install.sh
+```
+
+```bash
 cd ~/ns2-patched
+chmod +x install
+find . -type f -name "*.sh" -exec chmod +x {} \;
+find . -type f -name "configure" -exec chmod +x {} \;
 ./install
 ```
 

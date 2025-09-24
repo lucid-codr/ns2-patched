@@ -13,10 +13,6 @@ tar -zxvf ns-allinone-2.35.tar.gz
 
 USER_HOME=$(getent passwd $SUDO_USER | cut -d: -f6)
 
-# Define the base directory
-NS_DIR=$USER_HOME/ns-allinone-2.35
-
-
 if [ -d "$NS_DIR" ]; then
     echo "Directory exists: $NS_DIR"
 else
