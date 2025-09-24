@@ -4,14 +4,14 @@ It is updated to work out-of-the-box on **modern Ubuntu (via WSL2)** by applying
 
 ---
 
-## 📌 About NS-2
+## About NS-2
 **NS-2 (Network Simulator 2)** is a discrete event simulator widely used for research in:
 - TCP, routing, and multicast protocols
 - Wired, wireless, and satellite networks
 - Simulation of queueing, mobility, and traffic models
 
 The official project is no longer maintained, but it remains important for reproducible research.  
-This fork ensures **compatibility with WSL2 and modern compilers**.
+This fork ensures **compatibility with WSL2/Ubuntu**.
 
 ---
 ## Installation (WSL2 Ubuntu)
@@ -34,10 +34,10 @@ git clone https://github.com/lucid-codr/ns2-patched.git
 cd ns2-patched
 ```
 
-### 2. Run the automatic installer
+### 3. Run the automatic installer
 
 ```bash
-./linux-install.sh
+sudo bash linux-install.sh
 ```
 
 This script:
@@ -49,7 +49,7 @@ This script:
 **Note** : If you are using the orignal ns-allineone-2.35.tar.gz from sourceforge and not this patched repo
 You may use the `linux-install-orignal.sh` (ensure `ns-allinone-2.35.tar.gz` is in the home directory) which also applies the patches.
 
-### 3. Test the installation
+### 4. Test the installation
 
 ```bash
 cd ~/ns-patched/ns-2.35/tcl/ex/
@@ -64,7 +64,7 @@ ns simple.tcl
 ---
 
 
-## 🔧 Patches in This Fork
+## Patches in This Fork
 ### **Patch 1: Force GCC 4.8 Usage**
 The NS-2.35 build system defaults to the latest available GCC, which breaks compilation on modern systems.  
 We hardcode the compiler to `gcc-4.8` and `g++-4.8` in the following files:
